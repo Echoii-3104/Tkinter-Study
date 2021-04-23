@@ -1,14 +1,14 @@
 import tkinter as tk
 
 window = tk.Tk()
-window.title('my window')
+window.title('my first try')
 window.geometry('200x100')
 
 var = tk.StringVar()
-l = tk.Label(window, textvariable=var, bg='green', font=('Arial', 12), width=15,
+l = tk.Label(window, textvariable=var, bg='blue', font=('Arial', 12), width=15,
              height=2)
-#l = tk.Label(window, text='OMG! this is TK!', bg='green', font=('Arial', 12), width=15, height=2)
-l.pack()
+l.pack() # place on an area(up,down,left,right)
+#l.place() # place at one definite location
 
 on_hit = False
 def hit_me():
@@ -20,9 +20,7 @@ def hit_me():
         on_hit = False
         var.set('')
 
-b = tk.Button(window, text='hit me', width=15,
-              height=2, command=hit_me)
+b = tk.Button(window, text='hit me', width=15,  height=2, command=hit_me)
 b.pack()
 
-
-window.mainloop()
+window.mainloop() # window refresh loop -- required for all windows
