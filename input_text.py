@@ -1,15 +1,16 @@
 import tkinter as tk
 
 window = tk.Tk()
-window.title('my window')
+window.title('input-text window')
 window.geometry('200x200')
-# e = tk.Entry(window, show="*")
-e = tk.Entry(window, show="1")
-e.pack()
+
+e = tk.Entry(window, show="*")  # define an input box
+e.pack() #show on the window
 
 def insert_point():
-    var = e.get()
+    var = e.get() # get the context from the input box
     t.insert('insert', var)
+    
 def insert_end():
     var = e.get()
     # t.insert('end', var)
